@@ -226,6 +226,7 @@ sub GetPopupAnchor {
 		my $chrname = $log->{'chrname'};
 		my $targetmes = &ReplaceAnchorHTMLRSS($sow, $vil, $log->{'log'}, $anchor);
 		$targetmes =~ s/<br( \/)?>/ /ig;
+		$targetmes =~ s/<\/*font.*?>//ig;
 		$title = "$chrnameF$targetmes";
 	}
 
